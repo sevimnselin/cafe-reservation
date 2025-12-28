@@ -1,0 +1,530 @@
+[
+    {
+        "Date": "16-12-2024",
+        "availableSlots": [
+            {
+                "timeSlot": "18:00",
+                "availability": true
+            },
+            {
+                "timeSlot": "18:30",
+                "availability": false
+            },
+            {
+                "timeSlot": "19:00",
+                "availability": true
+            },
+            {
+                "timeSlot": "19:30",
+                "availability": true
+            },
+            {
+                "timeSlot": "20:00",
+                "availability": false
+            },
+            {
+                "timeSlot": "20:30",
+                "availability": false
+            },
+            {
+                "timeSlot": "21:00",
+                "availability": true
+            }
+        ]
+    },
+    {
+        "Date": "17-12-2024",
+        "availableSlots": [
+            {
+                "timeSlot": "18:00",
+                "availability": false
+            },
+            {
+                "timeSlot": "18:30",
+                "availability": false
+            },
+            {
+                "timeSlot": "19:00",
+                "availability": true
+            },
+            {
+                "timeSlot": "19:30",
+                "availability": true
+            },
+            {
+                "timeSlot": "20:00",
+                "availability": false
+            },
+            {
+                "timeSlot": "20:30",
+                "availability": true
+            },
+            {
+                "timeSlot": "21:00",
+                "availability": false
+            }
+        ]
+    },
+    {
+        "Date": "18-12-2024",
+        "availableSlots": [
+            {
+                "timeSlot": "18:00",
+                "availability": true
+            },
+            {
+                "timeSlot": "18:30",
+                "availability": true
+            },
+            {
+                "timeSlot": "19:00",
+                "availability": true
+            },
+            {
+                "timeSlot": "19:30",
+                "availability": true
+            },
+            {
+                "timeSlot": "20:00",
+                "availability": true
+            },
+            {
+                "timeSlot": "20:30",
+                "availability": false
+            },
+            {
+                "timeSlot": "21:00",
+                "availability": false
+            }
+        ]
+    },
+    {
+        "Date": "19-12-2024",
+        "availableSlots": [
+            {
+                "timeSlot": "18:00",
+                "availability": false
+            },
+            {
+                "timeSlot": "18:30",
+                "availability": false
+            },
+            {
+                "timeSlot": "19:00",
+                "availability": true
+            },
+            {
+                "timeSlot": "19:30",
+                "availability": true
+            },
+            {
+                "timeSlot": "20:00",
+                "availability": true
+            },
+            {
+                "timeSlot": "20:30",
+                "availability": true
+            },
+            {
+                "timeSlot": "21:00",
+                "availability": true
+            }
+        ]
+    },
+    {
+        "Date": "20-12-2024",
+        "availableSlots": [
+            {
+                "timeSlot": "18:00",
+                "availability": true
+            },
+            {
+                "timeSlot": "18:30",
+                "availability": false
+            },
+            {
+                "timeSlot": "19:00",
+                "availability": true
+            },
+            {
+                "timeSlot": "19:30",
+                "availability": false
+            },
+            {
+                "timeSlot": "20:00",
+                "availability": true
+            },
+            {
+                "timeSlot": "20:30",
+                "availability": false
+            },
+            {
+                "timeSlot": "21:00",
+                "availability": true
+            }
+        ]
+    },
+    {
+        "Date": "21-12-2024",
+        "availableSlots": [
+            {
+                "timeSlot": "18:00",
+                "availability": false
+            },
+            {
+                "timeSlot": "18:30",
+                "availability": false
+            },
+            {
+                "timeSlot": "19:00",
+                "availability": true
+            },
+            {
+                "timeSlot": "19:30",
+                "availability": false
+            },
+            {
+                "timeSlot": "20:00",
+                "availability": true
+            },
+            {
+                "timeSlot": "20:30",
+                "availability": false
+            },
+            {
+                "timeSlot": "21:00",
+                "availability": false
+            }
+        ]
+    },
+    {
+        "Date": "22-12-2024",
+        "availableSlots": [
+            {
+                "timeSlot": "18:00",
+                "availability": true
+            },
+            {
+                "timeSlot": "18:30",
+                "availability": true
+            },
+            {
+                "timeSlot": "19:00",
+                "availability": true
+            },
+            {
+                "timeSlot": "19:30",
+                "availability": true
+            },
+            {
+                "timeSlot": "20:00",
+                "availability": true
+            },
+            {
+                "timeSlot": "20:30",
+                "availability": true
+            },
+            {
+                "timeSlot": "21:00",
+                "availability": false
+            }
+        ]
+    },
+    {
+        "Date": "23-12-2024",
+        "availableSlots": [
+            {
+                "timeSlot": "18:00",
+                "availability": false
+            },
+            {
+                "timeSlot": "18:30",
+                "availability": false
+            },
+            {
+                "timeSlot": "19:00",
+                "availability": false
+            },
+            {
+                "timeSlot": "19:30",
+                "availability": false
+            },
+            {
+                "timeSlot": "20:00",
+                "availability": false
+            },
+            {
+                "timeSlot": "20:30",
+                "availability": true
+            },
+            {
+                "timeSlot": "21:00",
+                "availability": false
+            }
+        ]
+    },
+    {
+        "Date": "24-12-2024",
+        "availableSlots": [
+            {
+                "timeSlot": "18:00",
+                "availability": true
+            },
+            {
+                "timeSlot": "18:30",
+                "availability": false
+            },
+            {
+                "timeSlot": "19:00",
+                "availability": false
+            },
+            {
+                "timeSlot": "19:30",
+                "availability": true
+            },
+            {
+                "timeSlot": "20:00",
+                "availability": true
+            },
+            {
+                "timeSlot": "20:30",
+                "availability": true
+            },
+            {
+                "timeSlot": "21:00",
+                "availability": false
+            }
+        ]
+    },
+    {
+        "Date": "25-12-2024",
+        "availableSlots": [
+            {
+                "timeSlot": "18:00",
+                "availability": true
+            },
+            {
+                "timeSlot": "18:30",
+                "availability": true
+            },
+            {
+                "timeSlot": "19:00",
+                "availability": false
+            },
+            {
+                "timeSlot": "19:30",
+                "availability": false
+            },
+            {
+                "timeSlot": "20:00",
+                "availability": true
+            },
+            {
+                "timeSlot": "20:30",
+                "availability": true
+            },
+            {
+                "timeSlot": "21:00",
+                "availability": false
+            }
+        ]
+    },
+    {
+        "Date": "26-12-2024",
+        "availableSlots": [
+            {
+                "timeSlot": "18:00",
+                "availability": true
+            },
+            {
+                "timeSlot": "18:30",
+                "availability": true
+            },
+            {
+                "timeSlot": "19:00",
+                "availability": false
+            },
+            {
+                "timeSlot": "19:30",
+                "availability": false
+            },
+            {
+                "timeSlot": "20:00",
+                "availability": true
+            },
+            {
+                "timeSlot": "20:30",
+                "availability": true
+            },
+            {
+                "timeSlot": "21:00",
+                "availability": false
+            }
+        ]
+    },
+    {
+        "Date": "27-12-2024",
+        "availableSlots": [
+            {
+                "timeSlot": "18:00",
+                "availability": false
+            },
+            {
+                "timeSlot": "18:30",
+                "availability": true
+            },
+            {
+                "timeSlot": "19:00",
+                "availability": false
+            },
+            {
+                "timeSlot": "19:30",
+                "availability": false
+            },
+            {
+                "timeSlot": "20:00",
+                "availability": false
+            },
+            {
+                "timeSlot": "20:30",
+                "availability": true
+            },
+            {
+                "timeSlot": "21:00",
+                "availability": false
+            }
+        ]
+    },
+    {
+        "Date": "28-12-2024",
+        "availableSlots": [
+            {
+                "timeSlot": "18:00",
+                "availability": true
+            },
+            {
+                "timeSlot": "18:30",
+                "availability": true
+            },
+            {
+                "timeSlot": "19:00",
+                "availability": true
+            },
+            {
+                "timeSlot": "19:30",
+                "availability": false
+            },
+            {
+                "timeSlot": "20:00",
+                "availability": true
+            },
+            {
+                "timeSlot": "20:30",
+                "availability": true
+            },
+            {
+                "timeSlot": "21:00",
+                "availability": true
+            }
+        ]
+    },
+    {
+        "Date": "29-12-2024",
+        "availableSlots": [
+            {
+                "timeSlot": "18:00",
+                "availability": true
+            },
+            {
+                "timeSlot": "18:30",
+                "availability": true
+            },
+            {
+                "timeSlot": "19:00",
+                "availability": true
+            },
+            {
+                "timeSlot": "19:30",
+                "availability": false
+            },
+            {
+                "timeSlot": "20:00",
+                "availability": true
+            },
+            {
+                "timeSlot": "20:30",
+                "availability": true
+            },
+            {
+                "timeSlot": "21:00",
+                "availability": false
+            }
+        ]
+    },
+    {
+        "Date": "30-12-2024",
+        "availableSlots": [
+            {
+                "timeSlot": "18:00",
+                "availability": true
+            },
+            {
+                "timeSlot": "18:30",
+                "availability": false
+            },
+            {
+                "timeSlot": "19:00",
+                "availability": false
+            },
+            {
+                "timeSlot": "19:30",
+                "availability": false
+            },
+            {
+                "timeSlot": "20:00",
+                "availability": true
+            },
+            {
+                "timeSlot": "20:30",
+                "availability": true
+            },
+            {
+                "timeSlot": "21:00",
+                "availability": true
+            }
+        ]
+    },
+    {
+        "Date": "31-12-2024",
+        "availableSlots": [
+            {
+                "timeSlot": "18:00",
+                "availability": true
+            },
+            {
+                "timeSlot": "18:30",
+                "availability": false
+            },
+            {
+                "timeSlot": "19:00",
+                "availability": false
+            },
+            {
+                "timeSlot": "19:30",
+                "availability": true
+            },
+            {
+                "timeSlot": "20:00",
+                "availability": true
+            },
+            {
+                "timeSlot": "20:30",
+                "availability": false
+            },
+            {
+                "timeSlot": "21:00",
+                "availability": true
+            }
+        ]
+    }
+]

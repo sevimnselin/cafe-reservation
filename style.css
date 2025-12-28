@@ -1,0 +1,164 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+
+* {
+    text-decoration: none !important;
+}
+
+
+
+#cafe-mossnbeans {
+    display: block;
+    margin: 0 auto;
+}
+
+.logo-section {
+    text-align: center;
+}
+
+ul {
+    flex-wrap: none !important;
+    justify-content: center;
+}
+
+
+#tabs button {
+    color: #5c7d3e;
+    font-size: 16px;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: center;
+}
+
+.no-time-slots {
+    color: grey;
+}
+
+.info-box {
+    margin: 0 auto;
+    border: 2px dashed orange;
+    text-align: center;
+}
+
+.btn-submit {
+    color: #fff !important;
+    background-color: #0e4f37 !important;
+}
+
+.help-block {
+    color: #ced4da;
+}
+
+.hide {
+    display: none;
+}
+
+.field-validation-error {
+    color: red;
+    text-align: left;
+    font-size: small;
+}
+
+.align-center {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.width-80 {
+    width: 80%;
+}
+
+.width-60 {
+    width: 60%;
+}
+
+.waiting-list {
+    position: relative;
+    bottom: 0px;
+}
+
+.waiting-list a {
+    color: #868686;
+    font-size: 22px;
+    transition: transform 0.3s, color 0.3s;
+}
+
+#timePicker button {
+    margin: 0 2px 10px;
+    border: 1px solid #d2d0d0;
+    border-radius: 10px;
+    font-weight: 600px;
+}
+
+#timePicker .btn-info {
+    background-color: #106344 !important;
+    border-color: #106344 !important;
+    color: #fff
+}
+
+.tempus-dominus-widget .calendar {
+    background-color: white;
+    border-radius: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.tempus-dominus-widget.show {
+    width: 100%;
+
+}
+
+.tempus-dominus-widget .calendar .day:hover {
+    background-color: #e9ecef;
+    border-radius: 5px;
+}
+
+.tempus-dominus-widget .calendar .day.selected {
+    background-color: #0d6efd;
+    color: white;
+    border-radius: 5px;
+}
+
+.tempus-dominus-widget .calendar .day.today {
+    font-weight: bold;
+    color: #0d6efd;
+}
+
+/* CHECK THIS AGAIN!! */
+@media (max-width: 768px) {
+    .tabs-icons a {
+        font-size: 1.5rem;
+        /* Smaller size for mobile devices */
+        margin: 0 10px;
+    }
+}
+
+#reservation-calendar {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+table td {
+    height: 80px;
+    cursor: pointer;
+    vertical-align: middle;
+}
+
+table td.disabled {
+    background-color: #f8f9fa;
+    color: #ced4da;
+    cursor: not-allowed;
+}
+
+table td:hover:not(.disabled) {
+    background-color: #d4edda;
+}
+
+#time-slots button {
+    min-width: 100px;
+}
+
+#waiting-list {
+    max-width: 600px;
+    margin: 0 auto;
+}

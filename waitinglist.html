@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX">
+
+
+
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+
+
+    <title>Moss & Beans / Reservation</title>
+    <link rel="icon" href="img/logoMossBeans.webp" type="image/webp">
+</head>
+
+<body>
+    <!-- Header Section Start -->
+    <header id="header">
+        <section id="topBar">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <a href="index.html">
+                            <img src="img/logoMossBeans.webp" alt="Moss And Beans Logo" class="img-fluid">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </header>
+    <!-- Header Section End -->
+
+
+    <!-- Waiting Section Start -->
+    <section id="waiting-list" class="container mt-5">
+        <h2 class="text-center mb-4">Waiting List</h2>
+        <p class="text-center">Please fill out the form below to enter the waiting list, we will notify you if there is
+            availability.</p>
+
+        <form id="waiting-list-form">
+            <div class="form-group">
+                <label for="reservation-date">Date</label>
+                <input type="date" id="reservation-date" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="reservation-time">Time</label>
+                <input type="time" id="reservation-time" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="number-of-people">Number of People</label>
+                <input type="number" id="number-of-people" class="form-control" min="1" required>
+            </div>
+
+            <h3>Contact Information</h3>
+            <div class="form-group">
+                <label for="full-name">Full Name</label>
+                <input type="text" id="full-name" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" class="form-control" required>
+            </div>
+
+            <h3>Allergen Information</h3>
+            <div class="form-group">
+                <label for="allergy-yes">Are you or any of your guests allergic to anything?</label>
+                <div class="form-check">
+                    <input type="radio" id="allergy-yes" name="allergy" value="yes" class="form-check-input">
+                    <label class="form-check-label" for="allergy-yes">Yes</label>
+                </div>
+                <div class="form-check">
+                    <input type="radio" id="allergy-no" name="allergy" value="no" class="form-check-input" checked>
+                    <label class="form-check-label" for="allergy-no">No</label>
+                </div>
+                <textarea id="allergy-details" class="form-control"
+                    placeholder="Please let us know if you have any allergies." rows="3"></textarea>
+            </div>
+
+            <div class="form-check">
+                <input type="checkbox" id="receive-offers" class="form-check-input">
+                <label class="form-check-label" for="receive-offers">I consent to receiving special offers and campaign
+                    information from Moss & Beans.</label>
+            </div>
+
+            <div class="form-group text-center">
+                <button type="submit" class="btn btn-success">Submit My Waiting List Request</button>
+            </div>
+        </form>
+    </section>
+
+    <script>
+        // Example array of unavailable dates (format: 'YYYY-MM-DD')
+        const unavailableDates = ['2024-12-08', '2024-12-15', '2024-12-22'];
+
+        // Date picker validation for disabled dates
+        const dateInput = document.getElementById('reservation-date');
+
+        // Function to disable unavailable dates
+        function disableUnavailableDates() {
+            let today = new Date();
+            let todayString = today.toISOString().split('T')[0];  // Format to YYYY-MM-DD
+
+            // Set the minimum date to today (can't pick past dates)
+            dateInput.setAttribute('min', todayString);
+
+            // Disable unavailable dates
+            unavailableDates.forEach(date => {
+                let dateElements = document.querySelectorAll(`[value="${date}"]`);
+                dateElements.forEach(element => {
+                    element.setAttribute('disabled', true);
+                    element.classList.add('disabled-date');
+                });
+            });
+        }
+
+        // Disable Monday dates for reservation
+        dateInput.addEventListener('input', function () {
+            let selectedDate = new Date(this.value);
+            // Disable Monday (index 1 = Monday)
+            if (selectedDate.getDay() === 1) {
+                alert('Reservations are not available on Mondays due to closed hours.');
+                this.value = '';  // Reset date selection
+            }
+        });
+
+        // Call the function to disable unavailable dates
+        disableUnavailableDates();
+
+        // Handle form submission
+        document.getElementById('waiting-list-form').addEventListener('submit', function (event) {
+            event.preventDefault(); // Prevent form submission
+
+            const date = document.getElementById('reservation-date').value;
+            const time = document.getElementById('reservation-time').value;
+            const numberOfPeople = document.getElementById('number-of-people').value;
+
+            // Ensure all fields are filled
+            if (!date || !time || !numberOfPeople) {
+                alert('All fields are required!');
+                return;
+            }
+
+            // Redirect to time.html with selected date, time, and number of people
+            window.location.href = `time.html?date=${date}&time=${time}&people=${numberOfPeople}`;
+        });
+    </script>
+
+    <!-- Waiting Section End -->
+
+
+
+
+
+
+
+
+    <!-- Waiting List Lead Section Start -->
+    <section id="waitingListLead">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center py-5">
+                    <a href="" target="_blank"><i class="bi bi-info-circle"></i></a> <br>
+                    <small>Would you like to get back to sellect another date?</small> <br>
+                    <a style="color: #5c7d3e;" href="index.html" target="_blank">
+                        <small>Click to sellect another date available</small>
+
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+    <!-- Waiting List Lead Section End -->
+
+    <!-- <main class="container text-center mt-5">
+        <button onclick="window.location.href='rezervasyon.html'">Rezervasyon Yap</button>
+    </main> -->
+
+
+    <script src="main.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

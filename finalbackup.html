@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX">
+
+
+
+
+    <!-- <link rel="stylesheet" href="bootstrap.min.css"> -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+    <!-- Tempus Dominus Styles -->
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@eonasdan/tempus-dominus@6.9.4/dist/css/tempus-dominus.min.css"
+        crossorigin="anonymous">
+
+
+    <title>Moss & Beans / Reservation</title>
+    <link rel="icon" href="img/logoMossBeans.webp" type="image/webp">
+</head>
+
+<body>
+    <container id='cafe-mossnbeans'>
+        <!-- Header Section Start -->
+        <header id="header">
+            <section id="topBar">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 text-center">
+                            <a href="index.html">
+                                <img src="img/logoMossBeans.webp" alt="Moss And Beans Logo" class="img-fluid">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </header>
+        <!-- Header Section End -->
+
+        <!-- Tabs Control -->
+        <section id="menu">
+            <ul class="nav nav-tabs mb-3" id="tabControl" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="tab1" data-bs-toggle="tab" data-bs-target="#content1"
+                        type="button" role="tab" aria-controls="content1" aria-selected="true">
+                        <i class="bi bi-calendar"></i> ⎟
+                        <div>Date</div>
+                        <div id="selectedDate"></div>
+                    </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="tab2" data-bs-toggle="tab" data-bs-target="#content2" type="button"
+                        role="tab" aria-controls="content2" aria-selected="false">
+                        <i class="bi bi-clock"></i> ⎟
+                        <div>Time</div>
+                        <div id="selectedTime"></div>
+                    </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="tab3" data-bs-toggle="tab" data-bs-target="#content3" type="button"
+                        role="tab" aria-controls="content3" aria-selected="false">
+                        <i class="bi bi-people"></i> ⎟
+                        <div>Guests</div>
+                        <div id="selectedPeople"></div>
+                    </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="tab4" data-bs-toggle="tab" data-bs-target="#content4" type="button"
+                        role="tab" aria-controls="content4" aria-selected="false">
+                        <i class="bi bi-check2-all"></i>
+                    </button>
+                </li>
+            </ul>
+        </section>
+
+        <!-- Tabs Content -->
+        <div class="tab-content" id="tabContent">
+            <div class="tab-pane fade show active" id="content1" role="tabpanel" aria-labelledby="tab1">
+                <!-- Sellect Date Section Start -->
+                <section id="sellectDate">
+                    <div class="container">
+                        <div class="form-group text-center">
+                            <strong>Please sellect a date for your reservation</strong>
+                        </div>
+                        <div class="input-group" id="datepicker-container">
+                            <input type="text" id="datepicker" class="form-control" placeholder="MM/DD/YYYY">
+                            <button class="btn btn-outline-secondary" type="button" id="datepicker-toggle">
+                                <i class="bi bi-calendar"></i>
+                            </button>
+                        </div>
+                    </div>
+                </section>
+                <!-- Sellect Date Section End -->
+            </div>
+            <div class="tab-pane fade" id="content2" role="tabpanel" aria-labelledby="tab2">
+                <div class="form-group text-center">
+                    <strong>Dinner</strong>
+                </div>
+                <section id="timePicker">
+                    <button type="button" class="btn btn-sm btnSession btn-info" data-val="18:30" data-title="18:30"
+                        data-type="2">
+                        <span>18:30</span>
+                        <strong class="available">available</strong>
+                    </button>
+                    <button type="button" class="btn btn-sm btnSession btn-info" data-val="18:30" data-title="18:30"
+                        data-type="2">
+                        <span>18:30</span>
+                        <strong class="available">available</strong>
+                    </button>
+                    <button type="button" class="btn btn-sm btnSession btn-info" data-val="<span>18:30</span>"
+                        data-title="18:30" data-type="2">
+                        <span>18:30</span>
+                        <strong class="available">available</strong>
+                    </button>
+                    <button type="button" class="btn btn-sm btnSession disabled btn-white" data-val="20:00"
+                        data-title="20:00" data-type="2" disabled="">
+                        <span>20:00</span>
+                        <strong class="full">not available</strong>
+                    </button>
+                </section>
+            </div>
+            <div class="tab-pane fade" id="content3" role="tabpanel" aria-labelledby="tab3">
+                <section id="guestSelection">
+                    <div class="form-group text-center">
+                        <strong>Select Guests</strong>
+                    </div>
+                    <div class="form-group dress-code prePayment prePaymentAll">
+                        <p><i class="fa fa-2x fa-credit-card"></i></p>
+                        <strong class="provisionTitle hide">Provision Request</strong>
+                        <strong class="prePaymentTitle">Pre Payment Request</strong>
+                        <p class="forPax">For your bookings for the date and time of your choice, a <strong
+                                class="paymentPerPax">₺4.900</strong> amount of <strong class="paymentType">Pre
+                                Payment</strong>
+                            will be requested for each person in the reservation.</p>
+                        <p class="forTable hide">A <strong class="paymentPerPax">₺4.900</strong> amount of <strong
+                                class="paymentType">Pre Payment</strong> will be requested for your bookings for the
+                            date
+                            and
+                            time of your choice.</p>
+                        <p class="provisionAlert hide"><strong>The provision on your credit card will be canceled when
+                                you
+                                arrive at the restaurant.</strong></p>
+                    </div>
+                    <div class="form-group text-center"><strong>Please select number of guests</strong></div>
+                    <div class="form-group persons">
+                        <button type="button" class="btn btn-sm btn-white disabled" data-val="1" disabled="">1</button>
+                        <button type="button" class="btn btn-sm btn-white" data-val="2">2</button>
+                        <button type="button" class="btn btn-sm btn-white" data-val="3">3</button>
+                        <button type="button" class="btn btn-sm btn-white" data-val="4">4</button>
+                        <button type="button" class="btn btn-sm btn-white disabled" data-val="5" disabled="">5</button>
+                    </div>
+                </section>
+                <section id="reservationPersonalInfo" class="d-none">
+                    <div class="form-group text-center">
+                        <p><strong>Please complete your reservation</strong></p>
+                        <span class="help-block">All fields are required</span>
+                    </div>
+                    <div class="showErrors" style="display: none;">
+                        Some errors occurred and your operation could not be performed. <br> Please try again.
+                    </div>
+
+
+                    <form id="ReservationForm" novalidate="novalidate">
+
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-md-6 col-xs-6">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Firstname" maxlength="20"
+                                            tabindex="1" autocomplate="given-name" data-val="true"
+                                            data-val-required="This field is required." id="Firstname" name="Firstname"
+                                            value="">
+                                        <span class="field-validation-valid" data-valmsg-for="Firstname"
+                                            data-valmsg-replace="true"></span>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-xs-6">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Lastname" maxlength="20"
+                                            tabindex="2" autocomplate="family-name" data-val="true"
+                                            data-val-required="This field is required." id="Lastname" name="Lastname"
+                                            value="">
+                                        <span class="field-validation-valid" data-valmsg-for="Lastname"
+                                            data-valmsg-replace="true"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 col-xs-6">
+                                    <div class="form-group">
+                                        <select class="form-control selectize" placeholder="Country"
+                                            autocomplate="tel-country-code" data-val="true"
+                                            data-val-required="This field is required." id="CountryCode"
+                                            name="CountryCode">
+                                            <option value="" selected="">Country</option>
+                                            <option value="1">Turkey (+90)</option>
+                                            <option value="3">Afghanistan (+93)</option>
+                                            <option value="4">Aland Islands (+35818)</option>
+                                            <option value="15">Albania (+355)</option>
+                                            <option value="48">Algeria (+213)</option>
+                                            <option value="8">American Samoa (+1684)</option>
+                                            <option value="9">Andorra (+376)</option>
+                                            <option value="10">Angola (+244)</option>
+                                            <option value="11">Anguilla (+1264)</option>
+                                            <option value="12">Antartica (+672)</option>
+                                            <option value="13">Antigua and Barbuda (+1268)</option>
+                                            <option value="14">Argentina (+54)</option>
+                                            <option value="63">Armenia (+374)</option>
+                                            <option value="16">Aruba (+297)</option>
+                                            <option value="17">Australia (+61)</option>
+                                            <option value="18">Austria (+43)</option>
+                                            <option value="19">Azerbaijan (+994)</option>
+                                            <option value="20">Bahamas (+1242)</option>
+                                            <option value="21">Bahrain (+973)</option>
+                                            <option value="22">Bangladesh (+880)</option>
+                                            <option value="23">Barbados (+1246)</option>
+                                            <option value="29">Belarus (+375)</option>
+                                            <option value="25">Belgium (+32)</option>
+                                            <option value="26">Belize (+501)</option>
+                                            <option value="27">Benin (+229)</option>
+                                            <option value="28">Bermuda (+1441)</option>
+                                            <option value="42">Bhutan (+975)</option>
+                                            <option value="32">Bolivia (+591)</option>
+                                            <option value="34">Bosnia and Herzegovina (+387)</option>
+                                            <option value="35">Botswana (+267)</option>
+                                            <option value="36">Bouvet Islands (+47)</option>
+                                            <option value="37">Brazil (+55)</option>
+                                            <option value="38">Brunei Darussalam (+673)</option>
+                                            <option value="39">Bulgaria (+359)</option>
+                                            <option value="40">Burkina Faso (+226)</option>
+                                            <option value="41">Burundi (+257)</option>
+                                            <option value="33">Bonaire, Sint Eustatius and Saba (+599)</option>
+                                            <option value="103">British Indian Ocean Territory (+246)</option>
+                                            <option value="119">Canada (+1)</option>
+                                            <option value="117">Cambodia (+855)</option>
+                                            <option value="118">Cameroon (+237)</option>
+                                            <option value="44">Cape Verde (+238)</option>
+                                            <option value="45">Cayman Islands (+1345)</option>
+                                            <option value="178">Central African Republic (+236)</option>
+                                            <option value="43">Chad (+235)</option>
+                                            <option value="208">Chile (+56)</option>
+                                            <option value="51">China (+86)</option>
+                                            <option value="52">Cocos (Keeling), Islands (+61)</option>
+                                            <option value="49">Christmas Islands (+61)</option>
+                                            <option value="54">Cura (+599)</option>
+                                            <option value="126">Colombia (+57)</option>
+                                            <option value="127">Comoros (+269)</option>
+                                            <option value="53">Cook Islands (+682)</option>
+                                            <option value="131">Costa Rica (+506)</option>
+                                            <option value="98">Croatia (+385)</option>
+                                            <option value="132">Cuba (+53)</option>
+                                            <option value="91">Cyprus (+357)</option>
+                                            <option value="47">Czech Republic (+420)</option>
+                                            <option value="129">Democratic Republic of Congo (+243)</option>
+                                            <option value="55">Denmark (+45)</option>
+                                            <option value="50">Djibouti (+253)</option>
+                                            <option value="57">Dominica (+1767)</option>
+                                            <option value="56">Dominican Republic (+1809)</option>
+                                            <option value="58">Ecuador (+593)</option>
+                                            <option value="161">Egypt (+20)</option>
+                                            <option value="60">El Salvador (+503)</option>
+                                            <option value="62">Eritrea (+291)</option>
+                                            <option value="64">Estonia (+372)</option>
+                                            <option value="65">Ethiopia (+251)</option>
+                                            <option value="66">Falkland Islands (+500)</option>
+                                            <option value="67">Faroe Islands (+298)</option>
+                                            <option value="68">Fas (+212)</option>
+                                            <option value="69">Fiji (+679)</option>
+                                            <option value="73">Finland (+358)</option>
+                                            <option value="74">France (+33)</option>
+                                            <option value="76">French Guyana (+594)</option>
+                                            <option value="77">French Polynesia (+689)</option>
+                                            <option value="75">French Southern and Antarctic Lands (+242)</option>
+                                            <option value="128">Kongo - Brazavil (+242)</option>
+                                            <option value="78">Gabon (+241)</option>
+                                            <option value="79">Gambia (+220)</option>
+                                            <option value="93">Georgia (+995)</option>
+                                            <option value="5">Germany (+49)</option>
+                                            <option value="80">Ghana (+233)</option>
+                                            <option value="46">Gibraltar (+350)</option>
+                                            <option value="251">Greece (+30)</option>
+                                            <option value="84">Greenland (+299)</option>
+                                            <option value="83">Grenada (+1473)</option>
+                                            <option value="85">Guadalupe (+590)</option>
+                                            <option value="86">Guam (+1671)</option>
+                                            <option value="87">Guatemala (+502)</option>
+                                            <option value="88">Guernsey (+441481)</option>
+                                            <option value="81">Guinea (+224)</option>
+                                            <option value="59">Guinea Equatoriale (+240)</option>
+                                            <option value="82">Guinea-Bissau (+245)</option>
+                                            <option value="94">Guyana (+592)</option>
+                                            <option value="95">Haiti (+509)</option>
+                                            <option value="96">Heard Island and McDonald Islands (+246)</option>
+                                            <option value="101">Honduras (+504)</option>
+                                            <option value="102">Hong Kong (+852)</option>
+                                            <option value="145">Hungary (+36)</option>
+                                            <option value="113">Iceland (+354)</option>
+                                            <option value="97">India (+91)</option>
+                                            <option value="61">Indonesia (+62)</option>
+                                            <option value="106">Iran (+98)</option>
+                                            <option value="105">Iraq (+964)</option>
+                                            <option value="107">Ireland (+353)</option>
+                                            <option value="154">Isle of Man (+441624)</option>
+                                            <option value="109">Israel (+972)</option>
+                                            <option value="112">Italy (+39)</option>
+                                            <option value="70">Ivoire (+225)</option>
+                                            <option value="114">Jamaica (+1876)</option>
+                                            <option value="115">Japan (+81)</option>
+                                            <option value="116">Jersey (+441534)</option>
+                                            <option value="241">Jordan (+962)</option>
+                                            <option value="123">Kenya (+254)</option>
+                                            <option value="125">Kiribati (+686)</option>
+                                            <option value="133">Kuwait (+965)</option>
+                                            <option value="124">Kyrgyzstan (+996)</option>
+                                            <option value="136">Laos Democratic Republic, (+856)</option>
+                                            <option value="138">Latvia (+371)</option>
+                                            <option value="143">Lebanon (+961)</option>
+                                            <option value="139">Liberia (+231)</option>
+                                            <option value="140">Libya (+218)</option>
+                                            <option value="137">Lesotho (+266)</option>
+                                            <option value="141">Liechtenstein (+423)</option>
+                                            <option value="142">Lithuania (+370)</option>
+                                            <option value="144">Luxembourg (+352)</option>
+                                            <option value="147">Macau (+853)</option>
+                                            <option value="148">Macedonia (+389)</option>
+                                            <option value="146">Madagascar (+261)</option>
+                                            <option value="149">Malawi (+265)</option>
+                                            <option value="151">Malaysia (+60)</option>
+                                            <option value="150">Maldives (+960)</option>
+                                            <option value="152">Mali (+223)</option>
+                                            <option value="153">Malta (+356)</option>
+                                            <option value="155">Marshall Islands (+692)</option>
+                                            <option value="156">Martinique (+596)</option>
+                                            <option value="166">Mauritania (+222)</option>
+                                            <option value="157">Mauritius (+230)</option>
+                                            <option value="159">Mexico (+52)</option>
+                                            <option value="160">Micronesia, Federated States of (+691)</option>
+                                            <option value="163">Moldavia, Republic of (+373)</option>
+                                            <option value="164">Monaco (+377)</option>
+                                            <option value="162">Mongolia (+976)</option>
+                                            <option value="120">Montenegro (+382)</option>
+                                            <option value="165">Montserrat (+1664)</option>
+                                            <option value="167">Mozambique (+258)</option>
+                                            <option value="168">Myanmar (Burma), (+95)</option>
+                                            <option value="169">Namibia, Republic of (+264)</option>
+                                            <option value="170">Nauru (+674)</option>
+                                            <option value="171">Nepal (+977)</option>
+                                            <option value="99">Netherlands (+31)</option>
+                                            <option value="249">New Caledonia (+687)</option>
+                                            <option value="250">New Zealand (+64)</option>
+                                            <option value="174">Nicaragua (+505)</option>
+                                            <option value="172">Niger (+227)</option>
+                                            <option value="173">Nigeria (+234)</option>
+                                            <option value="175">Niue (+683)</option>
+                                            <option value="176">Norfolk Island (+672)</option>
+                                            <option value="134">North Korea (+850)</option>
+                                            <option value="135">Northern Mariana Islands (+1670)</option>
+                                            <option value="240">Oman (+968)</option>
+                                            <option value="181">Pakistan (+92)</option>
+                                            <option value="182">Palau, Republic of (+680)</option>
+                                            <option value="72">Palestinian Territories (West Bank and Gaza), (+970)
+                                            </option>
+                                            <option value="183">Panama (+507)</option>
+                                            <option value="184">Papua New Guinea (+675)</option>
+                                            <option value="185">Paraguay (+595)</option>
+                                            <option value="186">Peru (+51)</option>
+                                            <option value="71">Philippines (+63)</option>
+                                            <option value="187">Pitcairn Islands (+870)</option>
+                                            <option value="188">Poland (+48)</option>
+                                            <option value="189">Portugal (+351)</option>
+                                            <option value="190">Puerto Rico (+1787)</option>
+                                            <option value="121">Qatar (+974)</option>
+                                            <option value="158">Reunion (+262)</option>
+                                            <option value="191">Reunion (+262)</option>
+                                            <option value="192">Romania (+40)</option>
+                                            <option value="194">Russia (+7)</option>
+                                            <option value="122">Kazakistan (+7)</option>
+                                            <option value="193">Rwanda (+250)</option>
+                                            <option value="222">Saudi Arabia (+966)</option>
+                                            <option value="196">Saint Helena (Island) (+290)</option>
+                                            <option value="197">Saint Kitts and Nevis (+1869)</option>
+                                            <option value="198">Saint Lucia (+1758)</option>
+                                            <option value="199">Saint Martin (+590)</option>
+                                            <option value="195">Saint Barthelemy (+590)</option>
+                                            <option value="200">Saint Pierre and Miquelon (+508)</option>
+                                            <option value="201">Saint Vincent and the Grenadines (+1784)</option>
+                                            <option value="202">Samoa (+685)</option>
+                                            <option value="203">San Marino (+378)</option>
+                                            <option value="204">Sao Tome and Principe (+239)</option>
+                                            <option value="205">Senegal (+221)</option>
+                                            <option value="211">Serbia (+381)</option>
+                                            <option value="212">Serbia and Montenegro (+381)</option>
+                                            <option value="130">Kosovo (+381)</option>
+                                            <option value="206">Seychelles (+248)</option>
+                                            <option value="207">Sierra Leone (+232)</option>
+                                            <option value="209">Singapore (+65)</option>
+                                            <option value="210">Sint Maarten (+599)</option>
+                                            <option value="100">Netherlands Antilles (+599)</option>
+                                            <option value="213">Slovakia (+421)</option>
+                                            <option value="214">Slovenia (+386)</option>
+                                            <option value="215">Solomon Islands (+677)</option>
+                                            <option value="216">Somalia (+252)</option>
+                                            <option value="89">South Africa (+27)</option>
+                                            <option value="90">South Georgia (+0)</option>
+                                            <option value="179">Other (+0)</option>
+                                            <option value="92">South Korea (+82)</option>
+                                            <option value="217">South Sudan (+211)</option>
+                                            <option value="108">Spain (+34)</option>
+                                            <option value="218">Sri Lanka (+94)</option>
+                                            <option value="219">Sudan (+249)</option>
+                                            <option value="220">Surinam (+597)</option>
+                                            <option value="223">Svalbard and Jan Mayen Islands (+47)</option>
+                                            <option value="177">Norvay (+47)</option>
+                                            <option value="224">Swaziland (+268)</option>
+                                            <option value="110">Sweden (+46)</option>
+                                            <option value="111">Switzerland (+41)</option>
+                                            <option value="221">Syria (+963)</option>
+                                            <option value="228">Taiwan (+886)</option>
+                                            <option value="225">Tajikistan (+992)</option>
+                                            <option value="226">Tanzania (+255)</option>
+                                            <option value="227">Thailand (+66)</option>
+                                            <option value="229">Timor-Leste (+670)</option>
+                                            <option value="230">Togo (+228)</option>
+                                            <option value="231">Tokelau (+690)</option>
+                                            <option value="232">Tonga (+676)</option>
+                                            <option value="233">Trinidad and Tobago (+1868)</option>
+                                            <option value="234">Tunisia (+216)</option>
+                                            <option value="235">Turkmenistan (+993)</option>
+                                            <option value="236">Turks and Caicos Islands (+1649)</option>
+                                            <option value="237">Tuvalu (+688)</option>
+                                            <option value="238">Uganda (+256)</option>
+                                            <option value="239">Ukraine (+380)</option>
+                                            <option value="30">United Arab Emirates (+971)</option>
+                                            <option value="31">United Kingdom (+44)</option>
+                                            <option value="6">United States of America (+1)</option>
+                                            <option value="7">United States of America (Islands) (+1)</option>
+                                            <option value="242">Uruguay (+598)</option>
+                                            <option value="180">Uzbekistan (+998)</option>
+                                            <option value="243">Vanuatu (+678)</option>
+                                            <option value="244">Vatican City (+379)</option>
+                                            <option value="245">Venezuela (+58)</option>
+                                            <option value="246">Vietnam (+84)</option>
+                                            <option value="104">Virgin Islands (British), (+1284)</option>
+                                            <option value="2">Virgin Islands (U.S.), (+1340)</option>
+                                            <option value="247">Wallis and Futuna (+681)</option>
+                                            <option value="24">Western Sahara (+212)</option>
+                                            <option value="248">Yemen (+967)</option>
+                                            <option value="252">Zambia (+260)</option>
+                                            <option value="253">Zimbabwe (+263)</option>
+
+                                        </select>
+                                        <span class="field-validation-valid" data-valmsg-for="CountryCode"
+                                            data-valmsg-replace="true"></span>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-xs-6">
+                                    <div class="form-group">
+                                        <input type="tel" class="form-control numbersOnly" placeholder="Phone number"
+                                            maxlength="10" autocomplete="off" tabindex="3" data-val="true"
+                                            data-val-required="This field is required." id="PhoneNumber"
+                                            name="PhoneNumber" value="" aria-required="true">
+                                        <span class="field-validation-valid" data-valmsg-for="PhoneNumber"
+                                            data-valmsg-replace="true"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" class="form-control" placeholder="E-mail address" maxlength="50"
+                                    tabindex="4" autocomplate="email" data-val="true"
+                                    data-val-regex="Please enter a valid email address." data-val-regex-pattern="^(([\w-]+\.)+[\w-]+|([a-zA-Z]{1}|[\w-]{2,}))@((([0-1]?[0-9]{1,2}|25[0-5]|2[0-4][0-9])\.([0-1]?
+                        [0-9]{1,2}|25[0-5]|2[0-4][0-9])\.([0-1]?[0-9]{1,2}|25[0-5]|2[0-4][0-9])\.([0-1]?
+                        [0-9]{1,2}|25[0-5]|2[0-4][0-9])){1}|([a-zA-Z0-9]+[\w-]+\.)+[a-zA-Z]{1}[a-zA-Z0-9-]{1,23})$"
+                                    data-val-required="This field is required." id="EmailAddress" name="EmailAddress"
+                                    value="">
+                                <span class="field-validation-valid" data-valmsg-for="EmailAddress"
+                                    data-valmsg-replace="true"></span>
+                            </div>
+                            <div class="form-group customSection allergies">
+                                <strong>Allergen Information</strong>
+                                <p>Are you or any of your guests allergic to anything?</p>
+                                <label for="AllergiesAlert_1">
+                                    <input id="AllergiesAlert_1" type="radio" tabindex="6" value="true"
+                                        name="AllergiesAlert" aria-required="true"> <span>Yes</span>
+                                </label>
+                                <label for="AllergiesAlert_0">
+                                    <input id="AllergiesAlert_0" type="radio" tabindex="6" value="false"
+                                        name="AllergiesAlert"> <span>No</span>
+                                </label>
+                                <span class="field-validation-valid" data-valmsg-for="AllergiesAlert"
+                                    data-valmsg-replace="true"></span>
+                            </div>
+                            <div class="form-group">
+                                <p class="allergianMessage hide">You can enter allergen information in the field below.
+                                </p>
+                                <textarea class="form-control" rows="2"
+                                    placeholder="Your special requests, Allergen information (optional)" maxlength="150"
+                                    autocomplete="off" tabindex="6" data-val="true"
+                                    data-val-maxlength="Up to 150 characters." data-val-maxlength-max="150" id="Note"
+                                    name="Note"></textarea>
+                                <span class="field-validation-valid" data-valmsg-for="Note"
+                                    data-valmsg-replace="true"></span>
+                                <span class="help-block"><strong>* Please let us know if you have any
+                                        allergies.</strong></span>
+                            </div>
+
+                            <div class="form-group customSection">
+                                <p>If you wish, you can detail your reservation by selecting tags.</p>
+                                <div>
+                                    <label for="Tag_1"><input type="checkbox" id="Tag_1" name="Tags" value="1">
+                                        Birthday</label>
+                                    <label for="Tag_4"><input type="checkbox" id="Tag_4" name="Tags" value="4">
+                                        Anniversary</label>
+                                    <label for="Tag_7345"><input type="checkbox" id="Tag_7345" name="Tags" value="7345">
+                                        Honeymoon</label>
+                                </div>
+                            </div>
+                            <div class="form-group customSection">
+                                <strong>Invoice Request</strong>
+                                <p>Will you request an invoice for this visit?</p>
+                                <label for="InvoiceRequest_1">
+                                    <input id="InvoiceRequest_1" type="radio" tabindex="5" value="true" data-val="true"
+                                        data-val-required="The InvoiceRequest field is required." name="InvoiceRequest">
+                                    <span>Yes</span>
+                                </label>
+                                <label for="InvoiceRequest_0">
+                                    <input id="InvoiceRequest_0" type="radio" tabindex="5" value="false" checked=""
+                                        name="InvoiceRequest"> <span>No</span>
+                                </label>
+                            </div>
+                            <div class="form-group taxPanel hide">
+                                <p>You can enter your billing information in this section.</p>
+                                <div class="form-group">
+                                    <div class="row">
+                                        <div class="col-md-12 col-xs-12">
+                                            <input type="text" class="form-control" placeholder="Company Title"
+                                                maxlength="150" data-val="true"
+                                                data-val-maxlength="Up to 150 characters." data-val-maxlength-max="150"
+                                                data-val-required="This field is required." id="CompanyTitle"
+                                                name="CompanyTitle" value="">
+                                            <span class="field-validation-valid" data-valmsg-for="CompanyTitle"
+                                                data-valmsg-replace="true"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="row">
+                                        <div class="col-md-6 col-xs-6">
+                                            <input type="text" class="form-control" placeholder="Tax Office"
+                                                maxlength="50" data-val="true" data-val-maxlength="Up to 50 characters."
+                                                data-val-maxlength-max="50" data-val-required="This field is required."
+                                                id="CompanyTaxOffice" name="CompanyTaxOffice" value="">
+                                            <span class="field-validation-valid" data-valmsg-for="CompanyTaxOffice"
+                                                data-valmsg-replace="true"></span>
+                                        </div>
+                                        <div class="col-md-6 col-xs-6">
+                                            <input type="text" class="form-control numbersOnly" placeholder="Tax Number"
+                                                maxlength="11" data-val="true"
+                                                data-val-length="At least 10 can be up to 11 characters."
+                                                data-val-length-max="11" data-val-length-min="10"
+                                                data-val-required="This field is required." id="CompanyTaxNumber"
+                                                name="CompanyTaxNumber" value="">
+                                            <span class="field-validation-valid" data-valmsg-for="CompanyTaxNumber"
+                                                data-valmsg-replace="true"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="row">
+                                        <div class="col-md-12 col-xs-12">
+                                            <textarea class="form-control" placeholder="Company Address" maxlength="250"
+                                                rows="2" data-val="true" data-val-maxlength="Up to 250 characters."
+                                                data-val-maxlength-max="250" data-val-required="This field is required."
+                                                id="CompanyAddress" name="CompanyAddress"></textarea>
+                                            <span class="field-validation-valid" data-valmsg-for="CompanyAddress"
+                                                data-valmsg-replace="true"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group dress-code">
+                                <p><i class="fa fa-2x fa-info-circle"></i></p>
+                                <p class="subTitle"><strong>Terms &amp; Conditions</strong></p>
+                                <p>Kindly READ and follow the <strong>steps below:</strong></p>
+                                <p><strong>Booking &amp; Payment Policy:</strong></p>
+                                <p>TURK Fatih Tutak tasting menu experience is priced at <strong>9900TL/per
+                                        guest.</strong> A 12% service charge is added to all food and beverage items.
+                                </p>
+                                <p>To secure your booking a pre-payment of <strong>4.900TL per person</strong> is
+                                    required within <strong>24 hours.</strong> The pre-payment received via online
+                                    reservation will be deducted from your bill at the restaurant. </p>
+                                <p><strong>Special Dietaries Policy:</strong></p>
+                                <p>Due to daily micro seasonal changes, please do note we are not able to accommodate
+                                    <strong>vegan, vegetarian diets, lactose intolerances,</strong> and <strong>gluten
+                                        allergies (Celiac).</strong> Also note, our tasting menu emphasizes on
+                                    <strong>seafood and fish produce,</strong> which we are <strong>unable to
+                                        remove.</strong>
+                                </p>
+                                <p><strong>Restaurant Concept:</strong></p>
+                                <p>Chef Signature Tasting Menu consists of 12 courses and other surprises (Slow Dining 3
+                                    hours). <strong>À la carte options are not available.</strong></p>
+                                <p><strong>Child’s Policy:</strong></p>
+                                <p>Child’s Policy:
+                                    TURK accommodates children <strong>12 years</strong> of age and above. <strong>Kids
+                                        menu is not available.</strong>
+                                </p>
+                                <p>Valet parking <strong>available</strong></p>
+                                <p><strong>Cancellation Policy:</strong></p>
+                                <p>Cancellations made <strong>72 hours (or less)</strong> before the reservation date,
+                                    or no-shows, will not be eligible for a refund of the deposit previously made. </p>
+                                <p>Cancellations made <strong>72 hours (or more)</strong> before the reservation date
+                                    will receive a full refund of the respective deposit.</p>
+                            </div>
+
+                            <div class="form-group dress-code">
+                                <p><i class="fa fa-2x fa-warning"></i></p>
+                                <p class="subTitle"><strong>Dress Code</strong></p>
+                                <p>Smart-Elegant atire. Beachwear and athletic wear are to be avoided. Refrain from
+                                    wearing <strong>flip flops, short pants or hoodies</strong> for gentlemen.
+
+                                </p>
+                            </div>
+
+                            <div class="checkboxs">
+                                <label>
+                                    I have read and understood to the <a href="javascript:void(0);" data-toggle="modal"
+                                        data-target="#ClarificationTextModal" title="Clarification Text">Clarification
+                                        Text</a> presented to me.
+                                </label>
+                                <label for="AllergiesAccept">
+                                    <input type="checkbox" tabindex="8" data-val="true"
+                                        data-val-range="This field is required." data-val-range-max="True"
+                                        data-val-range-min="True"
+                                        data-val-required="The AllergiesAccept field is required." id="AllergiesAccept"
+                                        name="AllergiesAccept" value="true"> <span>I accept the
+                                        accuracy of the
+                                        information I have given about allergens.</span>
+                                    <span class="field-validation-valid" data-valmsg-for="AllergiesAccept"
+                                        data-valmsg-replace="true"></span>
+                                </label>
+                                <label for="Restaurant">
+                                    <input type="checkbox" tabindex="11" data-val="true"
+                                        data-val-required="The Restaurant field is required." id="Restaurant"
+                                        name="Restaurant" value="true"> <span>I expressly consent to the sending of
+                                        special offers and campaign information by TURK FATIH TUTAK within the scope of
+                                        the <a href="javascript:void(0);" data-toggle="modal"
+                                            data-target="#CommercialMessageModal"
+                                            title="Commercial Electronic Message Approval Text">Commercial Electronic
+                                            Message Approval Text</a>.</span>
+                                </label>
+                            </div>
+                            <div class="form-group">
+                                <input type="hidden" data-val="true" data-val-required="Please select a date" id="Date"
+                                    name="Date" value="2024/12/19">
+                                <input type="hidden" data-val="true" data-val-required="Please select a time" id="Time"
+                                    name="Time" value="18:45">
+                                <input type="hidden" data-val="true" data-val-required="Please select a time" id="Shift"
+                                    name="Shift" value="2">
+                                <input type="hidden" data-val="true" data-val-required="Please select number of guests."
+                                    id="Guests" name="Guests" value="3">
+                                <input type="hidden" id="ApiKey" name="ApiKey" value="Turk-Fatih-Tutak">
+                                <input type="hidden" id="Language" name="Language" value="en-US">
+                                <input type="hidden" id="Source" name="Source" value="">
+                                <input type="hidden" data-val="true" data-val-required="This field is required."
+                                    id="RoomId" name="RoomId" value="1247">
+                                <input type="hidden" id="Provider" name="Provider" value="">
+                                <input type="hidden" id="GoogleAdwordsCamp" name="GoogleAdwordsCamp" value="">
+                                <input type="hidden" id="GoogleAdwordsClid" name="GoogleAdwordsClid" value="">
+                                <input type="hidden" id="NeedAllergiesConfirm" value="true">
+                                <input name="__RequestVerificationToken" type="hidden"
+                                    value="CfDJ8L6Zp8eNaPtMjBsZK2Fq-fSc-TFAAHaiQMddeFpocNORhwYomjiUbvqp3PdJpoAbG5QPLKbQtG3CRdVaaAXILo5XMHVKAc4V1arSKldYWdvUIKv7n7kMPQ1vUk1Wra_k2NySmig-lWKnHOuWLaDD_aw">
+                                <button id="reservationSubmit" class="btn btn-block btn-submit" tabindex="9">Continue
+                                    to Prepayment Page</button>
+                            </div>
+                            <div class="form-group">
+                                <span class="help-block">
+                                    By clicking Complete My Reservation, you are deemed to have accepted <a
+                                        href="/yasal/kullanim-kosullari-ve-gizlilik-politikasi?culture=en-US"
+                                        title="Reservem Terms of Use and Privacy Policy" class="rules"
+                                        target="_blank">Reservem Terms of Use and Privacy Policy</a>. You can reach the
+                                    Information text on the <a
+                                        href="/yasal/kisisel-verilerin-korunmasi-ve-islenmesine-dair-bilgilendirme?culture=en-US"
+                                        target="_blank" title="Protection and Processing of Personal Data">Protection
+                                        and Processing of Personal Data</a> here and the <a
+                                        href="/yasal/cerez-politikasi?culture=en-US" target="_blank"
+                                        title="Cookie Policy">Cookie Policy</a> text here.
+                                </span>
+                            </div>
+                        </div>
+                        <input name="AllergiesAccept" type="hidden" value="false"><input name="Restaurant" type="hidden"
+                            value="false">
+                    </form>
+                </section>
+                </section>
+            </div>
+            <div class="tab-pane fade" id="content4" role="tabpanel" aria-labelledby="tab4">
+                <p>Completed</p>
+            </div>
+        </div>
+        <!-- Menu Section End -->
+
+        <!-- Waiting List Lead Section Start -->
+        <section id="waitingListLead" class="waiting-list">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <a href="" target="_blank"><i class="bi bi-info-circle"></i></a> <br>
+                        <small>Is there no availability on the desired dates? If you wish, you can join our
+                            waiting list, and we will notify you in case of availability.</small> <br>
+                        <a style="color: #5c7d3e;" href="waitinglist.html" target="_blank">
+                            <small>Join the waiting list</small>
+
+                    </div>
+
+
+                </div>
+            </div>
+        </section>
+        <!-- Waiting List Lead Section End -->
+
+        <script src="main.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+            integrity="sha256-BRqBN7dYgABqtY9Hd4ynE+1slnEw+roEPFzQ7TRRfcg=" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@eonasdan/tempus-dominus@6.9.4/dist/js/tempus-dominus.min.js"
+            crossorigin="anonymous"></script>
+    </container>
+
+
+</body>
+
+</html>
